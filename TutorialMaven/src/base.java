@@ -11,21 +11,24 @@ public class base {
 
 	public static AndroidDriver capabilities() throws MalformedURLException {
 		// TODO Auto-generated method stub
-				
-		File appDir = new File("src");
 		
-		File app = new File(appDir, "ApiDemos-debug.apk");
+		String rootDir = "src";
+		String nameApk = "ApiDemos-debug.apk";
+		String nameDevice = "PruebaAppium";
+		String automationName = "uiautomator2";
+		String url = "http://127.0.0.1:4723/wd/hub";
+		
+		/*-------------------------------------------------------------------------------*/
+					
+		File app = new File(new File(rootDir), nameApk);
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		//Línea par declarar el nombre del emulador, cambiar si se requiere
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"PruebaAppium");
+			cap.setCapability(MobileCapabilityType.DEVICE_NAME,nameDevice);		
+			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());		
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, automationName);
 		
-		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-		
-		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-		
-		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+		AndroidDriver driver = new AndroidDriver(new URL(url),cap);
 		
 		return driver;
 	

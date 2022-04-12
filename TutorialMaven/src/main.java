@@ -7,6 +7,7 @@ public class main extends base{
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
 		
+		@SuppressWarnings("unused")
 		AndroidDriver driver = capabilities();
 		
 	}
