@@ -6,8 +6,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
 
-public class base {
+public class conector {
 
 	public static AndroidDriver capabilities() throws MalformedURLException {
 		// TODO Auto-generated method stub
@@ -24,7 +25,9 @@ public class base {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
+			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME,nameDevice);		
+			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "100");
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());		
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, automationName);
 		
