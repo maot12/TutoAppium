@@ -55,7 +55,7 @@ public class gestures extends conectorAndroidDriver{
 					  .withElement(element(longPre))
 					  .withDuration(ofSeconds(2))) .release() .perform();
 			  
-			  Thread.sleep(2000);
+			  //Thread.sleep(2000);
 					 
 
 		} catch (Exception e) {
