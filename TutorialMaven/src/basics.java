@@ -1,14 +1,9 @@
 import java.net.MalformedURLException;
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import io.appium.java_client.AppiumBy.ByAndroidViewTag;
 import io.appium.java_client.android.AndroidDriver;
 
-public class basics extends conector{
+public class basics extends conectorAndroidDriver{
 	
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws MalformedURLException {
 		
 		AndroidDriver driver = capabilities();

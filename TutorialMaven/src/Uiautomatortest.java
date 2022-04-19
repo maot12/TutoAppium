@@ -7,9 +7,8 @@ import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class Uiautomatortest extends conector{
+public class Uiautomatortest extends conectorAndroidDriver{
 
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
 		

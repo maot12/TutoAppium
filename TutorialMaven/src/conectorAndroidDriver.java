@@ -8,7 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
-public class conector {
+public class conectorAndroidDriver {
 
 	public static AndroidDriver capabilities() throws MalformedURLException {
 		// TODO Auto-generated method stub
