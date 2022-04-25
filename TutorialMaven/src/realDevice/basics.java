@@ -1,14 +1,14 @@
-package emulador;
+package realDevice;
 import java.net.MalformedURLException;
 import org.openqa.selenium.By;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class basics extends conectorAndroidDriver{
+public class basics extends conectorRealAndroid{
 	
 	public static void main(String[] args) throws MalformedURLException {
 		
-		AndroidDriver driver = capabilities();
+		AndroidDriver driver = capabilities("real");
 		
 		/*
 		 * Xpath Syntax
